@@ -1,0 +1,35 @@
+{
+  "name": "get-canadian-bank-name",
+  "version": "0.1.0",
+  "description": "A simple library to translate Canadian bank institution and transit numbers into the coresponding bank names.",
+  "type": "module",
+  "exports": "./index.js",
+  "types": "./index.d.ts",
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+  },
+  "scripts": {
+    "test": "mocha --timeout 30000",
+    "coverage": "c8 mocha --timeout 30000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cityssm/get-canadian-bank-name.git"
+  },
+  "author": "The Corporation of the City of Sault Ste. Marie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cityssm/get-canadian-bank-name/issues"
+  },
+  "homepage": "https://github.com/cityssm/get-canadian-bank-name#readme",
+  "devDependencies": {
+    "@types/mocha": "^9.1.0",
+    "@types/node": "^17.0.21",
+    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@typescript-eslint/parser": "^5.13.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-unicorn": "^40.1.0"
+  }
+}
