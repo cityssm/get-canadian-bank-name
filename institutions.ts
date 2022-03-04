@@ -1,4 +1,4 @@
-export const institutions = {
+export const institutions: { [bankInstitutionNumber: string]: string } = {
   "001": "Bank of Montreal",
   "002": "Bank of Nova Scotia",
   "003": "Royal Bank of Canada",

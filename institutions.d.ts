@@ -1,25 +1,4 @@
 export declare const institutions: {
-    "001": string;
-    "002": string;
-    "003": string;
-    "004": string;
-    "005": string;
-    "010": string;
-    "30800-010": string;
-    "016": string;
-    "030": string;
-    "039": string;
-    "270": string;
-    "326": string;
-    "328": string;
-    "509": string;
-    "540": string;
-    "614": string;
-    "828": string;
-    "03832-828": string;
-    "14492-828": string;
-    "60172-828": string;
-    "60182-828": string;
-    "61842-828": string;
+    [bankInstitutionNumber: string]: string;
 };
 export default institutions;
