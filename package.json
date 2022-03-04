@@ -1,5 +1,5 @@
 {
-  "name": "get-canadian-bank-name",
+  "name": "@cityssm/get-canadian-bank-name",
   "version": "0.1.0",
   "description": "A simple library to translate Canadian bank institution and transit numbers into the coresponding bank names.",
   "type": "module",
@@ -9,13 +9,21 @@
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
   "scripts": {
-    "test": "mocha --timeout 30000",
-    "coverage": "c8 mocha --timeout 30000"
+    "test": "mocha",
+    "coverage": "c8 mocha"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cityssm/get-canadian-bank-name.git"
   },
+  "keywords": [
+    "canada",
+    "bank",
+    "validation",
+    "institution-number",
+    "transit-number",
+    "branch-number"
+  ],
   "author": "The Corporation of the City of Sault Ste. Marie",
   "license": "MIT",
   "bugs": {

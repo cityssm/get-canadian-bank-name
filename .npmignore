@@ -1,0 +1,15 @@
+.git
+.github
+.nyc_output
+coverage
+node_modules
+test
+
+.atomignore
+.eslintignore
+.eslintrc.json
+.gitignore
+.ncurc.json
+.npmignore
+appveyor.yml
+tsconfig.json
