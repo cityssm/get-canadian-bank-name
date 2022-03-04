@@ -42,3 +42,8 @@ institution and transit numbers?
 [**Payments Canada** maintains a list](https://www.payments.ca/our-directories/financial-institutions-branch-directory)
 of all member banks and credit unions, along with their addresses,
 that is updated weekly.
+
+## Related Project
+
+**[wealthsimple/canadian-bank-account](https://github.com/wealthsimple/canadian-bank-account)** (Archived)<br />
+Validate transit and account numbers of common Canadian banks.
