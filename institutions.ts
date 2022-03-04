@@ -1,4 +1,16 @@
-export const institutions: { [bankInstitutionNumber: string]: string } = {
+/*
+ * Institutions File
+ * -----------------
+ *
+ * All bank name records should have keys formatted in one of two ways.
+ * - The three-digit institution number.
+ * - The five-digit transit number, a dash, the three-digit institution number.
+ *
+ * Transit numbers should only be added when the bank name changes
+ * based on the transit number, as is the case with many credit unions.
+ */
+
+export const institutions: { [institutionNumber: string]: string } = {
   "001": "Bank of Montreal",
   "002": "Bank of Nova Scotia",
   "003": "Royal Bank of Canada",
