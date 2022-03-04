@@ -14,7 +14,6 @@ export const getCanadianBankName = (institutionNumber: string | number, transitN
 
   if (!bankName) {
     bankName = institutions[institutionNumberString] as string;
-
   }
 
   return bankName;
