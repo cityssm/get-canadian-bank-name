@@ -1,5 +1,6 @@
 # Get Canadian Bank Name
 
+[![npm (scoped)](https://img.shields.io/npm/v/@cityssm/get-canadian-bank-name)](https://www.npmjs.com/package/@cityssm/get-canadian-bank-name)
 [![Codacy grade](https://img.shields.io/codacy/grade/c52a29dbdfa54c8b8c0733a0060d079e)](https://app.codacy.com/gh/cityssm/get-canadian-bank-name/dashboard)
 [![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/cityssm/get-canadian-bank-name)](https://codeclimate.com/github/cityssm/get-canadian-bank-name)
 [![Code Climate coverage](https://img.shields.io/codeclimate/coverage/cityssm/get-canadian-bank-name)](https://codeclimate.com/github/cityssm/get-canadian-bank-name)
