@@ -1,0 +1,6 @@
+{
+  "reject": [
+    "eslint",
+    "eslint-plugin-unicorn"
+  ]
+}
