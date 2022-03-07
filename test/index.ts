@@ -59,4 +59,21 @@ describe("Errors", () => {
     const bankName = getCanadianBankName(-12);
     assert.strictEqual(typeof(bankName), "undefined");
   });
+
+  it("Returns undefined for a null institution number", () => {
+    // eslint-disable-next-line unicorn/no-null
+    const bankName = getCanadianBankName(null);
+    assert.strictEqual(typeof(bankName), "undefined");
+  });
+
+  it("Returns undefined for an undefined institution number", () => {
+    // eslint-disable-next-line unicorn/no-useless-undefined
+    const bankName = getCanadianBankName(undefined);
+    assert.strictEqual(typeof(bankName), "undefined");
+  });
+
+  it("Returns undefined for a blank institution number", () => {
+    const bankName = getCanadianBankName("");
+    assert.strictEqual(typeof(bankName), "undefined");
+  });
 });
