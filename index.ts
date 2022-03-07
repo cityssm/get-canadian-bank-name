@@ -6,7 +6,7 @@ const invalidBankNumber = /\D/;
 const formatBankNumber = (unformattedNumber: string | number, numberLength: number): string | false => {
 
   // Ensure a number was passed
-  if (typeof(unformattedNumber) === "undefined") {
+  if (typeof(unformattedNumber) === "undefined" || typeof(unformattedNumber) === "object" || unformattedNumber === "") {
     return false;
   }
 

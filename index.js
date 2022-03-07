@@ -1,7 +1,7 @@
 import { institutions } from "./institutions.js";
 const invalidBankNumber = /\D/;
 const formatBankNumber = (unformattedNumber, numberLength) => {
-    if (typeof (unformattedNumber) === "undefined") {
+    if (typeof (unformattedNumber) === "undefined" || typeof (unformattedNumber) === "object" || unformattedNumber === "") {
         return false;
     }
     let formattedNumber = unformattedNumber.toString();
