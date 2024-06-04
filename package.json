@@ -6,11 +6,11 @@
   "exports": "./index.js",
   "types": "./index.d.ts",
   "engines": {
-    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+    "node": ">=18.0.0"
   },
   "scripts": {
-    "test": "mocha",
-    "coverage": "c8 mocha"
+    "test": "node --test",
+    "coverage": "c8 --reporter=lcov --reporter=text --reporter=text-summary node --test"
   },
   "repository": {
     "type": "git",
@@ -31,13 +31,7 @@
   },
   "homepage": "https://github.com/cityssm/get-canadian-bank-name#readme",
   "devDependencies": {
-    "@types/mocha": "^9.1.0",
-    "@types/node": "^17.0.25",
-    "@typescript-eslint/eslint-plugin": "^5.20.0",
-    "@typescript-eslint/parser": "^5.20.0",
-    "eslint": "^7.32.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-unicorn": "^40.1.0"
+    "@types/node": "^20.14.1",
+    "eslint-config-cityssm": "^3.2.0"
   }
 }

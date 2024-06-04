@@ -1,4 +1,2 @@
-export declare const institutions: {
-    [institutionNumber: string]: string;
-};
+export declare const institutions: Record<string, string>;
 export default institutions;

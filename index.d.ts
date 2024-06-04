@@ -1,2 +1,2 @@
-export declare const getCanadianBankName: (institutionNumber: string | number, transitNumber?: string | number) => string;
+export declare function getCanadianBankName(institutionNumber: string | number, transitNumber?: string | number): string | undefined;
 export default getCanadianBankName;

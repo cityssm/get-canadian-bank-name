@@ -1,60 +1,64 @@
-import { institutions } from "./institutions.js";
+import { institutions } from './institutions.js'
 
+const invalidBankNumber = /\D/
 
-const invalidBankNumber = /\D/;
-
-const formatBankNumber = (unformattedNumber: string | number, numberLength: number): string | false => {
-
+function formatBankNumber(
+  unformattedNumber: string | number,
+  numberLength: number
+): string | undefined {
   // Ensure a number was passed
-  if (typeof(unformattedNumber) === "undefined" || typeof(unformattedNumber) === "object" || unformattedNumber === "") {
-    return false;
+  if (
+    unformattedNumber === undefined ||
+    typeof unformattedNumber === 'object' ||
+    unformattedNumber === ''
+  ) {
+    return undefined
   }
 
-  let formattedNumber = unformattedNumber.toString();
+  let formattedNumber = unformattedNumber.toString()
 
   // Ensure the number isn't too long
   if (formattedNumber.length > numberLength) {
-    return false;
+    return undefined
   }
 
   // Ensure the number only contains digits
   if (invalidBankNumber.test(formattedNumber)) {
-    return false;
+    return undefined
   }
 
-  formattedNumber = ("00000" + formattedNumber).slice(-1 * numberLength);
+  formattedNumber = formattedNumber.padStart(numberLength, '0')
 
-  return formattedNumber;
-};
-
+  return formattedNumber
+}
 
 /**
- * @param {(string|number)} institutionNumber - A three-digit Canadian bank institution number.
- * @param {(string|number)} [transitNumber] - A five-digit Canadian bank transit (branch) number.
- * @returns {string} - A Canadian bank name.
+ * @param institutionNumber - A three-digit Canadian bank institution number.
+ * @param [transitNumber] - A five-digit Canadian bank transit (branch) number.
+ * @returns - A Canadian bank name.
  */
-export const getCanadianBankName = (institutionNumber: string | number, transitNumber?: string | number): string => {
+export function getCanadianBankName(institutionNumber: string | number,
+  transitNumber?: string | number): string | undefined {
+  let bankName: string | undefined
 
-  let bankName: string;
+  const institutionNumberString = formatBankNumber(institutionNumber, 3)
 
-  const institutionNumberString = formatBankNumber(institutionNumber, 3);
-
-  if (!institutionNumberString) {
-    return undefined;
+  if (institutionNumberString === undefined) {
+    return undefined
   }
 
-  const transitNumberString = formatBankNumber(transitNumber, 5);
+  const transitNumberString = formatBankNumber(transitNumber ?? '', 5)
 
-  if (transitNumberString) {
-    bankName = institutions[transitNumberString + "-" + institutionNumberString] as string;
+  if (transitNumberString !== undefined) {
+    bankName = institutions[`${transitNumberString}-${institutionNumberString}`]
   }
 
-  if (!bankName) {
-    bankName = institutions[institutionNumberString] as string;
+  if (bankName === undefined) {
+    // eslint-disable-next-line security/detect-object-injection
+    bankName = institutions[institutionNumberString] as string
   }
 
-  return bankName;
-};
+  return bankName
+}
 
-
-export default getCanadianBankName;
+export default getCanadianBankName
