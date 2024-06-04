@@ -5,9 +5,12 @@ coverage
 node_modules
 test
 
+.deepsource.toml
 .eslintignore
 .gitignore
 .ncurc.json
 .npmignore
+.prettierignore
+.prettierrc.json
 eslint.config.*
 tsconfig.json
