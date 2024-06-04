@@ -15,12 +15,12 @@ npm install @cityssm/get-canadian-bank-name
 ## Usage
 
 ```javascript
-import { getCanadianBankName } from "@cityssm/get-canadian-bank-name";
+import getCanadianBankName from '@cityssm/get-canadian-bank-name'
 
-console.log( getCanadianBankName('001') );
+console.log(getCanadianBankName('001'))
 // -> "Bank of Montreal"
 
-console.log( getCanadianBankName('828', '14492') );
+console.log(getCanadianBankName('828', '14492'))
 // => "Northern Credit Union"
 ```
 
