@@ -1,7 +1,7 @@
 import assert from 'node:assert'
 import { describe, it } from 'node:test'
 
-import { getCanadianBankName } from '../index.js'
+import getCanadianBankName from '../index.js'
 
 await describe('Bank of Montreal (001)', async () => {
   const bankOfMontreal = 'Bank of Montreal'
