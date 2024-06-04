@@ -37,8 +37,10 @@ function formatBankNumber(
  * @param [transitNumber] - A five-digit Canadian bank transit (branch) number.
  * @returns - A Canadian bank name.
  */
-export function getCanadianBankName(institutionNumber: string | number,
-  transitNumber?: string | number): string | undefined {
+export default function getCanadianBankName(
+  institutionNumber: string | number,
+  transitNumber?: string | number
+): string | undefined {
   let bankName: string | undefined
 
   const institutionNumberString = formatBankNumber(institutionNumber, 3)
@@ -60,5 +62,3 @@ export function getCanadianBankName(institutionNumber: string | number,
 
   return bankName
 }
-
-export default getCanadianBankName
