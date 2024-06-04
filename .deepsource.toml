@@ -5,3 +5,6 @@ name = "javascript"
 
   [analyzers.meta]
   environment = ["nodejs"]
+
+[[analyzers]]
+name = "test-coverage"
