@@ -11,6 +11,6 @@ test
 .ncurc.json
 .npmignore
 .prettierignore
-.prettierrc.json
 eslint.config.*
+prettier.config.*
 tsconfig.json
