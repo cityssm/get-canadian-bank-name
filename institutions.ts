@@ -10,6 +10,9 @@
  * as is the case with many credit unions.
  */
 
+/**
+ * Five-digit transit number, dash, three-digit institution number.
+ */
 type InstitutionKey = `${number}-${number}`
 
 export const institutions: Record<InstitutionKey, string> = {
