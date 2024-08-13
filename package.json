@@ -1,7 +1,7 @@
 {
   "name": "@cityssm/get-canadian-bank-name",
   "version": "1.0.0",
-  "description": "A simple library to translate Canadian bank institution and transit numbers into the coresponding bank names.",
+  "description": "A simple library to translate Canadian bank institution and transit numbers into the corresponding bank names.",
   "type": "module",
   "exports": "./index.js",
   "engines": {
