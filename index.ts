@@ -63,3 +63,5 @@ export default function getCanadianBankName(
 
   return bankName
 }
+
+export { institutionCommonNames } from './institutions.js'

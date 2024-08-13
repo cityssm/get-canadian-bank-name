@@ -31,3 +31,4 @@ export default function getCanadianBankName(institutionNumber, transitNumber = '
     }
     return bankName;
 }
+export { institutionCommonNames } from './institutions.js';

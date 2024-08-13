@@ -92,4 +92,11 @@ export const institutions: Record<InstitutionKey, string> = {
   '00000-899': 'Central 1 Credit Union - Alberta'
 }
 
-export default institutions
+export const institutionCommonNames = {
+  BMO: '001',
+  ScotiaBank: '002',
+  RBC: '003',
+  TD: '004',
+  CIBC: '010',
+  HSBC: '016'
+} as const
