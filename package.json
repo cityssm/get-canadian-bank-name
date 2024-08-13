@@ -30,8 +30,8 @@
   },
   "homepage": "https://github.com/cityssm/get-canadian-bank-name#readme",
   "devDependencies": {
-    "@types/node": "^20.14.2",
-    "eslint-config-cityssm": "^4.0.0",
+    "@types/node": "^22.2.0",
+    "eslint-config-cityssm": "^6.0.0",
     "prettier-config-cityssm": "^1.0.0"
   }
 }
