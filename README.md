@@ -1,6 +1,7 @@
 # Get Canadian Bank Name
 
 [![npm (scoped)](https://img.shields.io/npm/v/@cityssm/get-canadian-bank-name)](https://www.npmjs.com/package/@cityssm/get-canadian-bank-name)
+[![DeepSource](https://app.deepsource.com/gh/cityssm/get-canadian-bank-name.svg/?label=active+issues&show_trend=true&token=ACpR-NrF6n4gocX43YsQtz5M)](https://app.deepsource.com/gh/cityssm/get-canadian-bank-name/)
 [![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/cityssm/get-canadian-bank-name)](https://codeclimate.com/github/cityssm/get-canadian-bank-name)
 [![codecov](https://codecov.io/gh/cityssm/get-canadian-bank-name/graph/badge.svg?token=27K4BKDL15)](https://codecov.io/gh/cityssm/get-canadian-bank-name)
 
