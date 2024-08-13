@@ -16,7 +16,7 @@ function formatBankNumber(unformattedNumber, numberLength) {
     formattedNumber = formattedNumber.padStart(numberLength, '0');
     return formattedNumber;
 }
-export default function getCanadianBankName(institutionNumber, transitNumber) {
+export default function getCanadianBankName(institutionNumber, transitNumber = '00000') {
     let bankName;
     const institutionNumberString = formatBankNumber(institutionNumber, 3);
     if (institutionNumberString === undefined) {
@@ -27,7 +27,7 @@ export default function getCanadianBankName(institutionNumber, transitNumber) {
         bankName = institutions[`${transitNumberString}-${institutionNumberString}`];
     }
     if (bankName === undefined) {
-        bankName = institutions[institutionNumberString];
+        bankName = institutions[`00000-${institutionNumberString}`];
     }
     return bankName;
 }

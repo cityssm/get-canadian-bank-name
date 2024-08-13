@@ -39,8 +39,9 @@ function formatBankNumber(
  */
 export default function getCanadianBankName(
   institutionNumber: string | number,
-  transitNumber?: string | number
+  transitNumber: string | number = '00000'
 ): string | undefined {
+  // eslint-disable-next-line @typescript-eslint/init-declarations
   let bankName: string | undefined
 
   const institutionNumberString = formatBankNumber(institutionNumber, 3)
@@ -52,12 +53,12 @@ export default function getCanadianBankName(
   const transitNumberString = formatBankNumber(transitNumber ?? '', 5)
 
   if (transitNumberString !== undefined) {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     bankName = institutions[`${transitNumberString}-${institutionNumberString}`]
   }
 
   if (bankName === undefined) {
-    // eslint-disable-next-line security/detect-object-injection
-    bankName = institutions[institutionNumberString] as string
+    bankName = institutions[`00000-${institutionNumberString}`] as string
   }
 
   return bankName
