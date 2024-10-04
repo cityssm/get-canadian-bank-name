@@ -6,8 +6,8 @@
  * a five-digit transit number, a dash, and a three-digit institution number.
  *
  * The main bank record should use '00000' as the transit number.
- * Additional transit numbers should only be added when the bank name changes
- * as is the case with many credit unions.
+ * Transit numbers should only be added when the bank name changes
+ * as is the case with some credit unions.
  */
 
 /**

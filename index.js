@@ -1,28 +1,12 @@
 import { institutions } from './institutions.js';
-const invalidBankNumber = /\D/;
-function formatBankNumber(unformattedNumber, numberLength) {
-    if (unformattedNumber === undefined ||
-        typeof unformattedNumber === 'object' ||
-        unformattedNumber === '') {
-        return undefined;
-    }
-    let formattedNumber = unformattedNumber.toString();
-    if (formattedNumber.length > numberLength) {
-        return undefined;
-    }
-    if (invalidBankNumber.test(formattedNumber)) {
-        return undefined;
-    }
-    formattedNumber = formattedNumber.padStart(numberLength, '0');
-    return formattedNumber;
-}
+import { formatBankNumber, institutionNumberLength, transitNumberLength } from './utilities.js';
 export default function getCanadianBankName(institutionNumber, transitNumber = '00000') {
     let bankName;
-    const institutionNumberString = formatBankNumber(institutionNumber, 3);
+    const institutionNumberString = formatBankNumber(institutionNumber, institutionNumberLength);
     if (institutionNumberString === undefined) {
         return undefined;
     }
-    const transitNumberString = formatBankNumber(transitNumber ?? '', 5);
+    const transitNumberString = formatBankNumber(transitNumber, transitNumberLength);
     if (transitNumberString !== undefined) {
         bankName = institutions[`${transitNumberString}-${institutionNumberString}`];
     }
